@@ -5,11 +5,22 @@ import './App.css'
 import axios from 'axios'
 
 
-
-
 function App() {
+
   const [count, setCount] = useState(0)
 
+  const fetchData = async () => {
+    try {
+      const key = 'RnqzyslpQBxuBk53fSyonQ'
+      const response = await axios.get('https://www.carboninterface.com/api/v1/estimates');
+      console.log(response.data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
+
+  fetchData();
+  
   return (
     <>
       <div>
