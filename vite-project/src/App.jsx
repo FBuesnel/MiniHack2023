@@ -11,7 +11,7 @@ function App() {
 
   const fetchData = async () => {
     try {
-      const key = 'RnqzyslpQBxuBk53fSyonQ'
+      const Authorization = 'RnqzyslpQBxuBk53fSyonQ'
       const response = await axios.get('https://www.carboninterface.com/api/v1/estimates');
       console.log(response.data);
     } catch (error) {
